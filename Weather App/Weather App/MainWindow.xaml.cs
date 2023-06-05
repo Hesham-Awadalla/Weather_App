@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,10 @@ namespace Weather_App
         public MainWindow()
         {
             InitializeComponent();
+
+            APICall.LocateMe();
+
+            //APICall.SearchMyCity("Cairo", "Egypt");
         }
     }
 }
