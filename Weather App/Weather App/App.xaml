@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:Weather_App"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <TextBox x:Key="txtBox" HorizontalAlignment="Left" Height="185" Margin="116,52,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="556"/>
+        <Label x:Key="lblWetterDaten" HorizontalAlignment="Left" Width="320" Height="250" VerticalAlignment="Top"/>
+        <Image x:Key="img" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
     </Application.Resources>
 </Application>

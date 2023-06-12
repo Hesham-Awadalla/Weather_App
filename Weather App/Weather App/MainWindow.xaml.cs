@@ -24,10 +24,16 @@ namespace Weather_App
         public MainWindow()
         {
             InitializeComponent();
+        }
 
+        private void btnLocateMe_Click(object sender, RoutedEventArgs e)
+        {
             APICall.LocateMe();
+        }
 
-            //APICall.SearchMyCity("Cairo", "Egypt");
+        private void btnSearchCity_Click(object sender, RoutedEventArgs e)
+        {
+            APICall.SearchMyCity(txtBoxCity.Text, txtBoxCountry.Text);
         }
     }
 }

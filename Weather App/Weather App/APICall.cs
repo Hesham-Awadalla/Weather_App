@@ -4,6 +4,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace Weather_App
 {
@@ -30,14 +31,15 @@ namespace Weather_App
 
             JObject jsonW = API_Call(WetterURL, WetterUrlParam);
 
-            string ausgabe = "Current location: " + jsonW["location"]["name"] + ", " + jsonW["location"]["country"]
+            string ausgabe = "Current location:\n" + jsonW["location"]["name"] + ", " + jsonW["location"]["country"]
                            + "\n\nLocal time: " + jsonW["location"]["localtime"]
                            + "\nTemperatur: " + jsonW["current"]["temp_c"] + " °C | " + jsonW["current"]["temp_f"] + " °F"
                            + "\nWind: " + jsonW["current"]["wind_kph"] + " km/h"
                            + "\nPressure: " + jsonW["current"]["pressure_mb"] + " mb"
                            + "\nHumidity: " + jsonW["current"]["humidity"] + "%";
 
-            ((TextBox)App.Current.Resources["txtBox"]).Text = ausgabe;
+            ((Label)App.Current.Resources["lblWetterDaten"]).Content = ausgabe;
+            ((Image)App.Current.Resources["img"]).Source = new BitmapImage(new Uri("http:"+jsonW["current"]["condition"]["icon"].ToString()));
 
         }
 
@@ -52,15 +54,15 @@ namespace Weather_App
 
             JObject jsonW = API_Call(WetterURL, WetterUrlParam);
 
-            string ausgabe = "Current location: " + jsonW["location"]["name"] + ", " + jsonW["location"]["country"]
+            string ausgabe = "Current location:\n" + jsonW["location"]["name"] + ", " + jsonW["location"]["country"]
                            + "\n\nLocal time: " + jsonW["location"]["localtime"]
                            + "\nTemperatur: " + jsonW["current"]["temp_c"] + " °C | " + jsonW["current"]["temp_f"] + " °F"
                            + "\nWind: " + jsonW["current"]["wind_kph"] + " km/h"
                            + "\nPressure: " + jsonW["current"]["pressure_mb"] + " mb"
                            + "\nHumidity: " + jsonW["current"]["humidity"] + "%";
 
-            ((TextBox)App.Current.Resources["txtBox"]).Text = ausgabe;
-
+            ((Label)App.Current.Resources["lblWetterDaten"]).Content = ausgabe;
+            ((Image)App.Current.Resources["img"]).Source = new BitmapImage(new Uri("http:" + jsonW["current"]["condition"]["icon"].ToString()));
         }
 
         private static JObject API_Call(string url, string urlParam)
