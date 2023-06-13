@@ -31,7 +31,7 @@ namespace Weather_App
 
             JObject jsonW = API_Call(WetterURL, WetterUrlParam);
 
-            string ausgabe = "Current location:\n" + jsonW["location"]["name"] + ", " + jsonW["location"]["country"]
+            string ausgabe = "Location:\n" + jsonW["location"]["name"] + ", " + jsonW["location"]["country"]
                            + "\n\nLocal time: " + jsonW["location"]["localtime"]
                            + "\nTemperatur: " + jsonW["current"]["temp_c"] + " °C | " + jsonW["current"]["temp_f"] + " °F"
                            + "\nWind: " + jsonW["current"]["wind_kph"] + " km/h"
@@ -54,7 +54,8 @@ namespace Weather_App
 
             JObject jsonW = API_Call(WetterURL, WetterUrlParam);
 
-            string ausgabe = "Current location:\n" + jsonW["location"]["name"] + ", " + jsonW["location"]["country"]
+            //ToDo: try & catch (location)
+            string ausgabe = "Location:\n" + jsonW["location"]["name"] + ", " + jsonW["location"]["country"]
                            + "\n\nLocal time: " + jsonW["location"]["localtime"]
                            + "\nTemperatur: " + jsonW["current"]["temp_c"] + " °C | " + jsonW["current"]["temp_f"] + " °F"
                            + "\nWind: " + jsonW["current"]["wind_kph"] + " km/h"

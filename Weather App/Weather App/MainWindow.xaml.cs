@@ -24,6 +24,8 @@ namespace Weather_App
         public MainWindow()
         {
             InitializeComponent();
+
+            APICall.LocateMe();
         }
 
         private void btnLocateMe_Click(object sender, RoutedEventArgs e)
