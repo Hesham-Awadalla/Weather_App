@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -21,6 +22,8 @@ namespace Weather_App
     /// </summary>
     public partial class MainWindow : Window
     {
+        static DBAccess DB_Access = new DBAccess();
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,9 +36,30 @@ namespace Weather_App
             APICall.LocateMe();
         }
 
-        private void btnSearchCity_Click(object sender, RoutedEventArgs e)
+        private void txtBoxCity_TextChanged(object sender, TextChangedEventArgs e)
         {
-            APICall.SearchMyCity(txtBoxCity.Text, txtBoxCountry.Text);
+            if(txtBoxCity.Text != "")
+            {
+                ListBoxCitites.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                ListBoxCitites.Visibility = Visibility.Collapsed;
+            }
+
+            ListBoxCitites.ItemsSource = DB_Access.listCities(txtBoxCity.Text);         
+        }
+
+        private void listBoxSelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if(ListBoxCitites.SelectedIndex != -1)
+            {
+                string selectedCity = ListBoxCitites.SelectedItem.ToString();
+                APICall.SearchMyCity(selectedCity.Split(", ")[0], selectedCity.Split(", ")[1]);
+            }
+            ListBoxCitites.UnselectAll();
+            txtBoxCity.Text = "";
+
         }
     }
 }

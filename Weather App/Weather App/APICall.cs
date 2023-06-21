@@ -45,7 +45,7 @@ namespace Weather_App
 
         public static void SearchMyCity(string cityName, string countryName)
         {
-            string[] coordinates = DB_Access.Check_City(cityName, countryName);
+            string[] coordinates = DB_Access.Check_Coordinates(cityName, countryName);
 
             latitude = coordinates[0];
             longitude = coordinates[1];
@@ -65,6 +65,7 @@ namespace Weather_App
             ((Label)App.Current.Resources["lblWetterDaten"]).Content = ausgabe;
             ((Image)App.Current.Resources["img"]).Source = new BitmapImage(new Uri("http:" + jsonW["current"]["condition"]["icon"].ToString()));
         }
+        ////////////////////////////////////////
 
         private static JObject API_Call(string url, string urlParam)
         {

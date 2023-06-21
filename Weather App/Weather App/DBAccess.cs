@@ -1,4 +1,5 @@
-﻿using System.Data.SQLite;
+﻿using System.Collections.Generic;
+using System.Data.SQLite;
 using System.IO;
 using System.Text;
 
@@ -21,12 +22,43 @@ namespace Weather_App
             sqlite_conn = new SQLiteConnection(connectionString);
         }
 
-        public string[] Check_City(string cityName, string countryName)
+        public List<string> listCities(string cityName)
         {
             string city = null;
+            string country = null;
+            List<string> citiesList = new List<string>();
+
+            sqlite_conn.Open();
+
+            SQLiteDataReader sqlite_DataReader;
+            SQLiteCommand sqlite_Command;
+
+            sqlite_Command = sqlite_conn.CreateCommand();
+
+            string statement = $"SELECT city, country FROM cities WHERE city LIKE '{cityName}%';";
+
+            sqlite_Command.CommandText = statement;
+
+            sqlite_DataReader = sqlite_Command.ExecuteReader();
+
+            while (sqlite_DataReader.Read())
+            {
+
+                city = sqlite_DataReader.GetString(0);
+                country = sqlite_DataReader.GetString(1);
+                citiesList.Add($"{city}, {country}");
+            }
+
+            sqlite_DataReader.Close();
+            sqlite_conn.Close();
+
+            return citiesList;
+        }
+
+        public string[] Check_Coordinates(string cityName, string countryName)
+        {
             string latitude = null;
             string longitude = null;
-            string country = null;
 
             sqlite_conn.Open();
 
@@ -51,9 +83,10 @@ namespace Weather_App
             sqlite_DataReader.Close();
             sqlite_conn.Close();
 
-            string[] coordinates = {latitude, longitude};
+            string[] coordinates = { latitude, longitude };
 
             return coordinates;
         }
+
     }
 }
