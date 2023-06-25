@@ -1,0 +1,81 @@
+﻿
+-- Abgabe: 09.07    (GitRepo > öffentlich >> Davor die API-Keys verschlüsseln "xxxxxxxxxxxx"!)
+-- Präsentation: 14.07
+
+===================================================================================================
+API-Daten für die Visualisierung im Frontend
+===================================================================================================
+
+location:	- name			--> Name der Stadt
+			- country		--> Land
+			- localtime		--> Letzter Zeitpunkt an dem die Daten geladen wurden
+
+
+current:	- temp_c		--> Temperatur in Celsius
+			- feelslike_c	--> Gefühlte Temeratur 
+			- wind_kph		--> Windgeschwindigkeit
+
+			- condition
+				- text		--> Beschreibung Wetter
+				- icon		--> Icon zur Visualisierung
+
+===================================================================================================
+Elemente im Frontend
+===================================================================================================
+		// Elemente zum Suchen der Städte, Anzeigen der gesuchten Städte in einem Menü unter der Listbox, was den Suchkriterien entspricht und Locate Me
+
+        <TextBox x:Name="txtSearchCity" TextChanged="txtSearchCity_TextChanged"/>
+        <ListBox x:Name="lstFoundCitys" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Button x:Name="btnLocateMe" Content="Locate Me" Click="btnLocateMe_Click"/>
+
+        // Haupttemperatur anzeige
+
+        <Label x:Name="lblMainTemp" Content="Temp"/>
+        <Label x:Name="lblMainCity" Content="City"/>
+        <Label x:Name="lblMainCountry" Content="Country"/>
+        <Image x:Name="imgMain"/>
+
+
+        // Stadt 1
+
+        <Label x:Name="lblLocation1Temp" Content="Temp"/>
+        <Label x:Name="lblLocation1City" Content="City"/>
+        <Image x:Name="imgLocation1"/>
+        <Button x:Name="btnLocation1Change" Content="Change Location"/>
+
+        // Stadt 2
+
+        <Label x:Name="lblLocation2Temp" Content="Temp"/>
+        <Label x:Name="lblLocation2City" Content="City"/>
+        <Image x:Name="imgLocation2"/>
+        <Button x:Name="btnLocation2Change" Content="Change Location"/>
+
+        // Stadt 3
+
+        <Label x:Name="lblLocation3Temp" Content="Temp"/>
+        <Label x:Name="lblLocation3City" Content="City"/>
+        <Image x:Name="imgLocation3"/>
+        <Button x:Name="btnLocation3Change" Content="Change Location"/>        
+        
+        // Label auf der Oberfläche, wo die letzte Aktualisierung anzeigt
+        
+        <Label x:Name="lblLastUpdated" Content="Label"/>		
+
+===================================================================================================
+Funktionen im Frontend
+===================================================================================================
+
+- Beim Start der Software werden drei Default Städte geladen (ist das anpassbar?) und der aktuelle Standort
+
+- Button 'LocateMe'			--> Holt sich den aktuellen Standort des Nutzers und liefert ihm die Wetterdaten
+
+- TextBox 'SearchCity'		--> Beim Eingeben von einzelnen Zeichen wird aus der Datenbank eine gefilterte Liste angezeigt
+Autocomplete Textbox			Wird eine spezifische Stadt gewählt wird 'LocateCity' aufgerufen welche die Location-Werte liefert
+								und anschließend im Frontend darstellt
+
+- Button 'Refresh'			--> Der Nutzer kann den Refresh-Button betätigen, welcher aktuelle Datenlädt
+
+(x) Im Hintergrund soll alle 3 Minuten ein erneuter Refresh durchgeführt werden 
+
+
+

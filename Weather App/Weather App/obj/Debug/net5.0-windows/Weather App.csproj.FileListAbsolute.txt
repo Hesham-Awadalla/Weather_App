@@ -1,0 +1,89 @@
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.exe
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.deps.json
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.runtimeconfig.json
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.runtimeconfig.dev.json
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.dll
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.pdb
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.csproj.AssemblyReference.cache
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App_MarkupCompile.cache
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App_MarkupCompile.lref
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\MainWindow.baml
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.g.resources
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.AssemblyInfoInputs.cache
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.AssemblyInfo.cs
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.csproj.CoreCompileInputs.cache
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.csproj.CopyComplete
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.dll
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\refint\Weather App.dll
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.pdb
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.genruntimeconfig.cache
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\ref\Weather App.dll
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\bin\Debug\net5.0-windows\System.Data.SQLite.dll
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\bin\Debug\net5.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\bin\Debug\net5.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\bin\Debug\net5.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\bin\Debug\net5.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\SearchExtraLocation.g.cs
+C:\Users\MAUHOFM\Desktop\Weather App\Weather App\obj\Debug\net5.0-windows\SearchExtraLocation.baml
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.exe
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.deps.json
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.runtimeconfig.json
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.runtimeconfig.dev.json
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.dll
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.pdb
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\bin\Debug\net5.0-windows\System.Data.SQLite.dll
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\bin\Debug\net5.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\bin\Debug\net5.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\bin\Debug\net5.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\bin\Debug\net5.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.csproj.AssemblyReference.cache
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App_MarkupCompile.cache
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App_MarkupCompile.lref
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\obj\Debug\net5.0-windows\MainWindow.baml
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.g.resources
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.AssemblyInfoInputs.cache
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.AssemblyInfo.cs
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.csproj.CoreCompileInputs.cache
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.csproj.CopyComplete
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.dll
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\obj\Debug\net5.0-windows\refint\Weather App.dll
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.pdb
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.genruntimeconfig.cache
+C:\Users\hofma\OneDrive\Desktop\Weather App\Weather App\Weather App\obj\Debug\net5.0-windows\ref\Weather App.dll
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.exe
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.deps.json
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.runtimeconfig.json
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.runtimeconfig.dev.json
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.dll
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\bin\Debug\net5.0-windows\Weather App.pdb
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\bin\Debug\net5.0-windows\Newtonsoft.Json.dll
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\bin\Debug\net5.0-windows\System.Data.SQLite.dll
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\bin\Debug\net5.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\bin\Debug\net5.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\bin\Debug\net5.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\bin\Debug\net5.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.csproj.AssemblyReference.cache
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App_MarkupCompile.cache
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App_MarkupCompile.lref
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\obj\Debug\net5.0-windows\MainWindow.baml
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.g.resources
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.AssemblyInfoInputs.cache
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.AssemblyInfo.cs
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.csproj.CoreCompileInputs.cache
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.csproj.CopyComplete
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.dll
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\obj\Debug\net5.0-windows\refint\Weather App.dll
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.pdb
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\obj\Debug\net5.0-windows\Weather App.genruntimeconfig.cache
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App\Weather App\obj\Debug\net5.0-windows\ref\Weather App.dll
