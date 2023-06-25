@@ -14,11 +14,11 @@ namespace Weather_App
 
         static string latitude, longitude;
         static readonly string WetterURL = "http://api.weatherapi.com/v1/current.json";
-        static readonly string WetterKey = "585268ff92324b56990155655230605";
+        static readonly string WetterKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxx";
         static string WetterUrlParam = $"?Key={WetterKey}&q={latitude},{longitude}";
 
         static readonly string LocationURL = "https://api.ipgeolocation.io/ipgeo";
-        static readonly string LocationKey = "e9e073292d6e4d488aed4410e73a807e";
+        static readonly string LocationKey = "xxxxxxxxxxxxxxxxxxxxxxxxxxx";
         static string LocationUrlParam = $"?apiKey={LocationKey}&lang=en"; //(&lang=??) Response in Multiple Languages
 
         public static void LocateMe()
