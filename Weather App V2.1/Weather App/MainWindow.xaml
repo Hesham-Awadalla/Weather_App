@@ -1,0 +1,53 @@
+﻿<Window x:Class="Weather_App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Weather_App"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Weather App V2.1" Height="469" Width="649" Icon="/Resources/App-Icon.png">
+    <Grid HorizontalAlignment="Center" Width="652" Height="453" VerticalAlignment="Top">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Resources/Hintergrund.png"/>
+        </Grid.Background>
+        <GroupBox Header="Main" Margin="0,107,0,187" HorizontalAlignment="Center" Width="598" Foreground="White">
+            <Label x:Name="lblAdditionalWeatherData" Content="Additional weather data" HorizontalAlignment="Left" Height="130" Width="147" Margin="253,0,0,0" Foreground="White"/>
+        </GroupBox>
+
+        <GroupBox Header="Location 1" Margin="27,279,0,60" HorizontalAlignment="Left" Width="190" Foreground="White"/>
+        <GroupBox Header="Location 2" Margin="0,279,0,60" HorizontalAlignment="Center" Width="190" Foreground="White"/>
+        <GroupBox Header="Location 3" Margin="435,279,0,60" HorizontalAlignment="Left" Width="190" Foreground="White"/>
+        <TextBox x:Name="txtSearchCity" HorizontalAlignment="Left" Margin="34,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="303" Height="23" TextChanged="txtSearchCity_TextChanged"/>
+        <ListBox x:Name="lstFoundCitys" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="34,47,0,337" Visibility="Collapsed" SelectionChanged="lstFoundCitys_SelectionChanged" HorizontalAlignment="Left" Width="303"/>
+        <Button x:Name="btnLocateMe" Content="Locate me" HorizontalAlignment="Left" Margin="361,24,0,0" VerticalAlignment="Top" Click="btnLocateMe_Click" Height="23" Width="66"/>
+
+        <Label x:Name="lblMainTemp" Content="Temp" Margin="45,131,0,265" FontSize="24" FontWeight="Bold" HorizontalAlignment="Left" Width="141" Foreground="White"/>
+        <Label x:Name="lblMainCity" Content="City" Margin="45,180,0,0" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="161" Foreground="White"/>
+        <Label x:Name="lblMainCountry" Content="Country" Margin="45,198,0,0" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="161" Foreground="White"/>
+        <Image x:Name="imgMain" Margin="0,130,36,209" HorizontalAlignment="Right" Width="124"/>
+
+        <Label x:Name="lblLocation1Temp" Content="Temp" Margin="45,307,0,90" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Width="86" Foreground="White"/>
+        <Label x:Name="lblLocation1City" Content="City" Margin="45,336,0,73" HorizontalAlignment="Left" Width="172" Foreground="White"/>
+        <Image x:Name="imgLocation1" Margin="158,297,0,83" HorizontalAlignment="Left" Width="50"/>
+
+        <Label x:Name="lblLocation2Temp" Content="Temp" Margin="248,306,0,91" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Width="86" Foreground="White"/>
+        <Label x:Name="lblLocation2City" Content="City" Margin="248,336,0,73" HorizontalAlignment="Left" Width="175" Foreground="White"/>
+        <Image x:Name="imgLocation2" Margin="361,297,0,83" HorizontalAlignment="Left" Width="50"/>
+
+        <Label x:Name="lblLocation3Temp" Content="Temp" Margin="446,307,0,90" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Width="86" Foreground="White"/>
+        <Label x:Name="lblLocation3City" Content="City" Margin="446,336,0,73" HorizontalAlignment="Left" Width="175" Foreground="White"/>
+        <Image x:Name="imgLocation3" Margin="559,297,0,83" HorizontalAlignment="Left" Width="50"/>
+        <Button x:Name="btnLocation1Change" Content="Add city" Margin="38,379,0,0" Height="33" VerticalAlignment="Top" Click="btnLocation1Change_Click" HorizontalAlignment="Left" Width="168"/>
+        <Button x:Name="btnLocation2Change" Content="Add city" Margin="244,379,0,0" Height="33" VerticalAlignment="Top" Click="btnLocation2Change_Click" HorizontalAlignment="Left" Width="168"/>
+        <Button x:Name="btnLocation3Change" Content="Add city" Margin="446,379,0,0" Height="33" VerticalAlignment="Top" Click="btnLocation3Change_Click" HorizontalAlignment="Left" Width="168"/>
+        <Label x:Name="lblLastUpdated" Content="Label" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="455,8,0,0" VerticalAlignment="Top" Width="178" FontSize="8" Foreground="White"/>
+        <Label Content="Search city..." HorizontalAlignment="Left" Height="26" Margin="30,-2,0,0" VerticalAlignment="Top" Width="74" Foreground="White"/>
+        <Image x:Name="imgLocateMe" HorizontalAlignment="Left" Height="23" Margin="435,24,0,0" VerticalAlignment="Top" Width="26" Source="/Resources/LocateMe.png"/>
+        <Image x:Name="imgWind" HorizontalAlignment="Left" Height="30" Margin="241,128,0,0" VerticalAlignment="Top" Width="30" Source="/Resources/Wind.png"/>
+        <Image x:Name="imgPressure" HorizontalAlignment="Left" Height="27" Margin="241,157,0,0" VerticalAlignment="Top" Width="27" Source="/Resources/Luftdruck.png"/>
+        <Image x:Name="imgHumidity" HorizontalAlignment="Left" Height="30" Margin="242,190,0,0" VerticalAlignment="Top" Width="30" Source="/Resources/Lustfeuchtigkeit.png"/>
+        <Image x:Name="imgLocalTime" HorizontalAlignment="Left" Height="27" Margin="243,224,0,0" VerticalAlignment="Top" Width="27" Source="/Resources/LocalTime.png"/>
+
+    </Grid>
+</Window>

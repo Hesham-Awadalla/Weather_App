@@ -1,0 +1,76 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\HEOSMAN\\Documents\\#Mein Cloud\\4. Git\\#Weather_App\\Weather App\\Weather App\\Weather App.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\HEOSMAN\\Documents\\#Mein Cloud\\4. Git\\#Weather_App\\Weather App\\Weather App\\Weather App.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\HEOSMAN\\Documents\\#Mein Cloud\\4. Git\\#Weather_App\\Weather App\\Weather App\\Weather App.csproj",
+        "projectName": "Weather App",
+        "projectPath": "C:\\Users\\HEOSMAN\\Documents\\#Mein Cloud\\4. Git\\#Weather_App\\Weather App\\Weather App\\Weather App.csproj",
+        "packagesPath": "C:\\Users\\HEOSMAN\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HEOSMAN\\Documents\\#Mein Cloud\\4. Git\\#Weather_App\\Weather App\\Weather App\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\HEOSMAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0-windows"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0-windows7.0": {
+            "targetAlias": "net5.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "System.Data.SQLite.Core": {
+              "target": "Package",
+              "version": "[1.0.117, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

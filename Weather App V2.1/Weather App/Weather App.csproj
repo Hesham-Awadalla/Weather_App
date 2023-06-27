@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <RootNamespace>Weather_App</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\AddCity.png" />
+    <None Remove="Resources\App-Icon.png" />
+    <None Remove="Resources\bild hintergrund.png" />
+    <None Remove="Resources\cloudy.png" />
+    <None Remove="Resources\Hintergrund.png" />
+    <None Remove="Resources\LocalTime.png" />
+    <None Remove="Resources\LocateMe.png" />
+    <None Remove="Resources\Luftdruck.png" />
+    <None Remove="Resources\Lustfeuchtigkeit.png" />
+    <None Remove="Resources\screen_bearbeiten-removebg-preview.png" />
+    <None Remove="Resources\screen_luftdruck-removebg-preview.png" />
+    <None Remove="Resources\Wind.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.117" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\AddCity.png" />
+    <Resource Include="Resources\App-Icon.png" />
+    <Resource Include="Resources\Hintergrund.png" />
+    <Resource Include="Resources\LocalTime.png" />
+    <Resource Include="Resources\LocateMe.png" />
+    <Resource Include="Resources\Luftdruck.png" />
+    <Resource Include="Resources\Lustfeuchtigkeit.png" />
+    <Resource Include="Resources\Wind.png" />
+  </ItemGroup>
+
+</Project>
