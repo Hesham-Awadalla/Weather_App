@@ -27,11 +27,13 @@ namespace Weather_App
         Location locationDefault2 = new Location();
         Location locationDefault3 = new Location();
 
+        System.Windows.Input.MouseButtonEventArgs e;
+
         public MainWindow()
         {
             InitializeComponent();
 
-            btnLocateMe.RaiseEvent(new RoutedEventArgs(ButtonBase.ClickEvent));
+            imgLocateMe_Click(null, e);
             GetDefaultLocation();
             GetWeatherData(null, new EventArgs());
 
@@ -46,7 +48,7 @@ namespace Weather_App
             timer.Start();
         }
 
-        private void btnLocateMe_Click(object sender, RoutedEventArgs e)
+        private void imgLocateMe_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             locationMain = GeoLocator.LocateMe();
             JObject weatherDataMain = Weather.GetWeatherInformation(locationMain.Latitude, locationMain.Longitude);
@@ -83,23 +85,26 @@ namespace Weather_App
             lblMainCountry.Content = weatherDataMain["location"]["country"];
             imgMain.Source = new BitmapImage(new Uri("https:" + weatherDataMain["current"]["condition"]["icon"].ToString()));
 
-            string additionalWeatherData = "Wind: " + weatherDataMain["current"]["wind_kph"] + " km/h"
-            + "\n\nPressure: " + weatherDataMain["current"]["pressure_mb"] + " mb"
-            + "\n\nHumidity: " + weatherDataMain["current"]["humidity"] + "%"
-            + "\n\nLocal time: " + weatherDataMain["location"]["localtime"];
+            string additionalWeatherData = weatherDataMain["current"]["wind_kph"] + " km/h"
+            + "\n\n" + weatherDataMain["current"]["pressure_mb"] + " mb"
+            + "\n\n" + weatherDataMain["current"]["humidity"] + "%"
+            + "\n\n" + weatherDataMain["location"]["localtime"];
 
             lblAdditionalWeatherData.Content = additionalWeatherData;
 
             lblLocation1Temp.Content = weatherDataLocation1["current"]["temp_c"] + "°C";
             lblLocation1City.Content = weatherDataLocation1["location"]["name"];
+            lblLocation1Country.Content = weatherDataLocation1["location"]["country"];
             imgLocation1.Source = new BitmapImage(new Uri("https:" + weatherDataLocation1["current"]["condition"]["icon"].ToString()));
 
             lblLocation2Temp.Content = weatherDataLocation2["current"]["temp_c"] + "°C";
             lblLocation2City.Content = weatherDataLocation2["location"]["name"];
+            lblLocation2Country.Content = weatherDataLocation2["location"]["country"];
             imgLocation2.Source = new BitmapImage(new Uri("https:" + weatherDataLocation2["current"]["condition"]["icon"].ToString()));
 
             lblLocation3Temp.Content = weatherDataLocation3["current"]["temp_c"] + "°C";
             lblLocation3City.Content = weatherDataLocation3["location"]["name"];
+            lblLocation3Country.Content = weatherDataLocation3["location"]["country"];
             imgLocation3.Source = new BitmapImage(new Uri("https:" + weatherDataLocation3["current"]["condition"]["icon"].ToString()));
 
             lblLastUpdated.Content = "Last updated: " + weatherDataMain["current"]["last_updated"];
@@ -138,10 +143,10 @@ namespace Weather_App
                 lblMainCountry.Content = weatherDataMain["location"]["country"];
                 imgMain.Source = new BitmapImage(new Uri("https:" + weatherDataMain["current"]["condition"]["icon"].ToString()));
 
-                string additionalWeatherData = "Wind: " + weatherDataMain["current"]["wind_kph"] + " km/h"
-                + "\n\nPressure: " + weatherDataMain["current"]["pressure_mb"] + " mb"
-                + "\n\nHumidity: " + weatherDataMain["current"]["humidity"] + "%"
-                + "\n\nLocal time: " + weatherDataMain["location"]["localtime"];
+                string additionalWeatherData = weatherDataMain["current"]["wind_kph"] + " km/h"
+                + "\n\n" + weatherDataMain["current"]["pressure_mb"] + " mb"
+                + "\n\n" + weatherDataMain["current"]["humidity"] + "%"
+                + "\n\n" + weatherDataMain["location"]["localtime"];
 
                 lblAdditionalWeatherData.Content = additionalWeatherData;
             }
@@ -150,8 +155,7 @@ namespace Weather_App
             lstFoundCitys.SelectedItem = null;
         }
 
-        //Now: Change to MainLocation --> Independent Search
-        private async void btnLocation1Change_Click(object sender, RoutedEventArgs e)
+        private void imgLocation1Change_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             JObject locationStorage = JObject.Parse(File.ReadAllText(Directory.GetCurrentDirectory() + "\\LocationStorage.json"));
 
@@ -170,7 +174,7 @@ namespace Weather_App
             imgLocation1.Source = new BitmapImage(new Uri("https:" + weatherDataLocation1["current"]["condition"]["icon"].ToString()));
         }
 
-        private void btnLocation2Change_Click(object sender, RoutedEventArgs e)
+        private void imgLocation2Change_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             JObject locationStorage = JObject.Parse(File.ReadAllText(Directory.GetCurrentDirectory() + "\\LocationStorage.json"));
 
@@ -189,7 +193,7 @@ namespace Weather_App
             imgLocation2.Source = new BitmapImage(new Uri("https:" + weatherDataLocation2["current"]["condition"]["icon"].ToString()));
         }
 
-        private void btnLocation3Change_Click(object sender, RoutedEventArgs e)
+        private void imgLocation3Change_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
             JObject locationStorage = JObject.Parse(File.ReadAllText(Directory.GetCurrentDirectory() + "\\LocationStorage.json"));
 
