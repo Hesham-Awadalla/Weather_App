@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Weather_App"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Weather App V2.1" Height="469" Width="649" Icon="/Resources/App-Icon.png">
+        Title="Weather App V2.1" Height="469" Width="649" Icon="/Resources/App-Icon.png" ResizeMode="NoResize">
     <Grid HorizontalAlignment="Center" Width="652" Height="453" VerticalAlignment="Top">
         <Grid.Background>
             <ImageBrush ImageSource="/Resources/Hintergrund.png"/>
@@ -27,17 +27,17 @@
         <Image x:Name="imgMain" Margin="0,130,39,209" HorizontalAlignment="Right" Width="124"/>
 
         <Label x:Name="lblLocation1Temp" Content="Temp" Margin="42,300,0,97" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Width="86" Foreground="White"/>
-        <Label x:Name="lblLocation1City" Content="City" Margin="42,329,0,97" HorizontalAlignment="Left" Width="172" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblLocation1City" Content="City" Margin="42,330,0,96" HorizontalAlignment="Left" Width="172" Foreground="White" FontWeight="Bold"/>
         <Label x:Name="lblLocation1Country" Content="Country" Margin="42,348,0,78" HorizontalAlignment="Left" Width="172" Foreground="White"/>
         <Image x:Name="imgLocation1" Margin="154,299,0,81" HorizontalAlignment="Left" Width="50"/>
 
         <Label x:Name="lblLocation2Temp" Content="Temp" Margin="248,300,0,98" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Width="86" Foreground="White"/>
-        <Label x:Name="lblLocation2City" Content="City" Margin="248,329,0,97" HorizontalAlignment="Left" Width="175" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblLocation2City" Content="City" Margin="248,330,0,96" HorizontalAlignment="Left" Width="175" Foreground="White" FontWeight="Bold"/>
         <Label x:Name="lblLocation2Country" Content="Country" Margin="248,348,0,78" HorizontalAlignment="Left" Width="175" Foreground="White"/>
         <Image x:Name="imgLocation2" Margin="358,299,0,81" HorizontalAlignment="Left" Width="50"/>
 
         <Label x:Name="lblLocation3Temp" Content="Temp" Margin="449,300,0,97" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Width="86" Foreground="White"/>
-        <Label x:Name="lblLocation3City" Content="City" Margin="449,329,0,97" HorizontalAlignment="Left" Width="175" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblLocation3City" Content="City" Margin="449,330,0,96" HorizontalAlignment="Left" Width="175" Foreground="White" FontWeight="Bold"/>
         <Label x:Name="lblLocation3Country" Content="Country" Margin="449,348,0,78" HorizontalAlignment="Left" Width="175" Foreground="White"/>
         <Image x:Name="imgLocation3" Margin="561,299,0,81" HorizontalAlignment="Left" Width="50"/>
         <Label x:Name="lblLastUpdated" Content="Label" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="455,8,0,0" VerticalAlignment="Top" Width="178" FontSize="8" Foreground="White"/>
