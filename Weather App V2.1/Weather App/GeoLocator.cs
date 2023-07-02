@@ -1,16 +1,7 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Headers;
 using System.Net.Http;
-using System.Net;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web;
 using System.Windows;
-using System.Text.Json;
 
 namespace Weather_App
 {
@@ -34,7 +25,7 @@ namespace Weather_App
                 location.Latitude = Convert.ToString(json["latitude"]);
                 location.Longitude = Convert.ToString(json["longitude"]);
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error beim Ermitteln der Location", MessageBoxButton.OK, MessageBoxImage.Error);
             }

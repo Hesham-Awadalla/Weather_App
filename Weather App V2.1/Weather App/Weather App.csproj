@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <None Remove="Resources\AddCity.png" />
+    <None Remove="Resources\Analoge Uhr.png" />
     <None Remove="Resources\App-Icon.png" />
     <None Remove="Resources\bild hintergrund.png" />
     <None Remove="Resources\cloudy.png" />

@@ -11,46 +11,56 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Resources/Hintergrund.png"/>
         </Grid.Background>
-        <GroupBox Header="Main" Margin="0,107,0,187" HorizontalAlignment="Center" Width="598" Foreground="White">
-            <Label x:Name="lblAdditionalWeatherData" Content="Additional weather data" HorizontalAlignment="Left" Height="130" Width="174" Margin="273,0,0,0" Foreground="White"/>
-        </GroupBox>
 
-        <GroupBox x:Name="GroupBoxLoc1" Header="Location 1" Margin="27,279,0,60" HorizontalAlignment="Left" Width="190" Foreground="White"/>
-        <GroupBox x:Name="GroupBoxLoc2" Header="Location 2" Margin="0,279,0,60" HorizontalAlignment="Center" Width="190" Foreground="White"/>
-        <GroupBox x:Name="GroupBoxLoc3" Header="Location 3" Margin="435,279,0,60" HorizontalAlignment="Left" Width="190" Foreground="White"/>
+        <ContentControl Content="{DynamicResource canvasMainClock}" ToolTip="Local time"/>
+        <ContentControl Content="{DynamicResource canvasClock1}" ToolTip="Local time"/>
+        <ContentControl Content="{DynamicResource canvasClock2}" ToolTip="Local time"/>
+        <ContentControl Content="{DynamicResource canvasClock3}" ToolTip="Local time"/>
+
+        <Ellipse x:Name="ellipseMainClock" Height="60" Margin="565,20,27,373" Stroke="White" Width="60"/>
+        <Ellipse x:Name="ellipseClock1" Height="30" Margin="179,295,443,128" Stroke="White" Width="30"/>
+        <Ellipse x:Name="ellipseClock2" Height="30" Margin="383,295,239,128" Stroke="White" Width="30"/>
+        <Ellipse x:Name="ellipseClock3" Height="30" Margin="587,295,35,128" Stroke="White" Width="30"/>
+
+        <GroupBox x:Name="GroupBoxMain" Header="Main" Margin="0,107,0,187" HorizontalAlignment="Center" Width="598" Foreground="White"/>
+        <GroupBox x:Name="GroupBoxLoc1" Header="Location 1" Margin="27,279,0,50" HorizontalAlignment="Left" Width="190" Foreground="White"/>
+        <GroupBox x:Name="GroupBoxLoc2" Header="Location 2" Margin="0,279,0,50" HorizontalAlignment="Center" Width="190" Foreground="White"/>
+        <GroupBox x:Name="GroupBoxLoc3" Header="Location 3" Margin="435,279,0,50" HorizontalAlignment="Left" Width="190" Foreground="White"/>
         <TextBox x:Name="txtSearchCity" HorizontalAlignment="Left" Margin="34,24,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="303" Height="23" TextChanged="txtSearchCity_TextChanged"/>
         <ListBox x:Name="lstFoundCitys" d:ItemsSource="{d:SampleData ItemCount=3}" Margin="34,47,0,337" Visibility="Collapsed" SelectionChanged="lstFoundCitys_SelectionChanged" HorizontalAlignment="Left" Width="303"/>
 
         <Label x:Name="lblMainTemp" Content="Temp" Margin="45,131,0,265" FontSize="30" FontWeight="Bold" HorizontalAlignment="Left" Width="141" Foreground="White"/>
         <Label x:Name="lblMainCity" Content="City" Margin="45,180,0,0" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="208" Foreground="White" FontWeight="Bold" FontSize="17"/>
         <Label x:Name="lblMainCountry" Content="Country" Margin="45,209,0,0" Height="32" VerticalAlignment="Top" HorizontalAlignment="Left" Width="161" Foreground="White"/>
-        <Image x:Name="imgMain" Margin="0,130,39,209" HorizontalAlignment="Right" Width="124"/>
+        <Image x:Name="imgMain" Margin="513,130,0,225" HorizontalAlignment="Left" Width="98"/>
 
         <Label x:Name="lblLocation1Temp" Content="Temp" Margin="42,300,0,97" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Width="86" Foreground="White"/>
-        <Label x:Name="lblLocation1City" Content="City" Margin="42,330,0,96" HorizontalAlignment="Left" Width="172" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lblLocation1Country" Content="Country" Margin="42,348,0,78" HorizontalAlignment="Left" Width="172" Foreground="White"/>
-        <Image x:Name="imgLocation1" Margin="154,299,0,81" HorizontalAlignment="Left" Width="50"/>
+        <Label x:Name="lblLocation1City" Content="City" Margin="42,340,0,86" HorizontalAlignment="Left" Width="172" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblLocation1Country" Content="Country" Margin="42,358,0,68" HorizontalAlignment="Left" Width="172" Foreground="White"/>
+        <Image x:Name="imgLocation1" Margin="153,321,0,80" HorizontalAlignment="Left" Width="50"/>
 
         <Label x:Name="lblLocation2Temp" Content="Temp" Margin="248,300,0,98" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Width="86" Foreground="White"/>
-        <Label x:Name="lblLocation2City" Content="City" Margin="248,330,0,96" HorizontalAlignment="Left" Width="175" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lblLocation2Country" Content="Country" Margin="248,348,0,78" HorizontalAlignment="Left" Width="175" Foreground="White"/>
-        <Image x:Name="imgLocation2" Margin="358,299,0,81" HorizontalAlignment="Left" Width="50"/>
+        <Label x:Name="lblLocation2City" Content="City" Margin="248,340,0,86" HorizontalAlignment="Left" Width="175" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblLocation2Country" Content="Country" Margin="248,358,0,68" HorizontalAlignment="Left" Width="175" Foreground="White"/>
+        <Image x:Name="imgLocation2" Margin="357,321,0,80" HorizontalAlignment="Left" Width="50"/>
 
         <Label x:Name="lblLocation3Temp" Content="Temp" Margin="449,300,0,97" FontSize="20" FontWeight="Bold" HorizontalAlignment="Left" Width="86" Foreground="White"/>
-        <Label x:Name="lblLocation3City" Content="City" Margin="449,330,0,96" HorizontalAlignment="Left" Width="175" Foreground="White" FontWeight="Bold"/>
-        <Label x:Name="lblLocation3Country" Content="Country" Margin="449,348,0,78" HorizontalAlignment="Left" Width="175" Foreground="White"/>
-        <Image x:Name="imgLocation3" Margin="561,299,0,81" HorizontalAlignment="Left" Width="50"/>
-        <Label x:Name="lblLastUpdated" Content="Label" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="455,8,0,0" VerticalAlignment="Top" Width="178" FontSize="8" Foreground="White"/>
+        <Label x:Name="lblLocation3City" Content="City" Margin="449,340,0,86" HorizontalAlignment="Left" Width="175" Foreground="White" FontWeight="Bold"/>
+        <Label x:Name="lblLocation3Country" Content="Country" Margin="449,358,0,68" HorizontalAlignment="Left" Width="175" Foreground="White"/>
+        <Image x:Name="imgLocation3" Margin="560,321,0,80" HorizontalAlignment="Left" Width="50"/>
         <Label Content="Search city..." HorizontalAlignment="Left" Height="26" Margin="30,-2,0,0" VerticalAlignment="Top" Width="74" Foreground="White"/>
         <Image x:Name="imgLocateMe" HorizontalAlignment="Left" Height="23" Margin="352,24,0,0" VerticalAlignment="Top" Width="26" Source="/Resources/LocateMe.png" MouseLeftButtonDown="imgLocateMe_Click" ToolTip="Locate me"/>
-        <Image x:Name="imgWind" HorizontalAlignment="Left" Height="30" Margin="270,128,0,0" VerticalAlignment="Top" Width="30" Source="/Resources/Wind.png" ToolTip="Wind speed"/>
-        <Image x:Name="imgPressure" HorizontalAlignment="Left" Height="27" Margin="270,157,0,0" VerticalAlignment="Top" Width="27" Source="/Resources/Luftdruck.png" ToolTip="Air pressure"/>
-        <Image x:Name="imgHumidity" HorizontalAlignment="Left" Height="30" Margin="271,190,0,0" VerticalAlignment="Top" Width="30" Source="/Resources/Lustfeuchtigkeit.png" ToolTip="Humidity"/>
-        <Image x:Name="imgLocalTime" HorizontalAlignment="Left" Height="27" Margin="272,224,0,0" VerticalAlignment="Top" Width="27" Source="/Resources/LocalTime.png" ToolTip="Local time"/>
+        <Image x:Name="imgWind" HorizontalAlignment="Left" Height="34" Margin="277,136,0,0" VerticalAlignment="Top" Width="33" Source="/Resources/Wind.png" ToolTip="Wind speed"/>
+        <Image x:Name="imgPressure" HorizontalAlignment="Left" Height="31" Margin="277,177,0,0" VerticalAlignment="Top" Width="30" Source="/Resources/Luftdruck.png" ToolTip="Air pressure"/>
+        <Image x:Name="imgHumidity" HorizontalAlignment="Left" Height="33" Margin="278,217,0,0" VerticalAlignment="Top" Width="34" Source="/Resources/Lustfeuchtigkeit.png" ToolTip="Humidity"/>
 
-        <Image x:Name="addCity1_icon" HorizontalAlignment="Left" Height="20" Margin="190,295,0,0" VerticalAlignment="Top" Width="20" Source="/Resources/AddCity.png" MouseLeftButtonDown="imgLocation1Change_Click" ToolTip="Add city"/>
-        <Image x:Name="addCity2_icon" HorizontalAlignment="Left" Height="20" Margin="394,295,0,0" VerticalAlignment="Top" Width="20" Source="/Resources/AddCity.png" MouseLeftButtonDown="imgLocation2Change_Click" ToolTip="Add city"/>
-        <Image x:Name="addCity3_icon" HorizontalAlignment="Left" Height="20" Margin="598,295,0,0" VerticalAlignment="Top" Width="20" Source="/Resources/AddCity.png" MouseLeftButtonDown="imgLocation3Change_Click" ToolTip="Add city"/>
+        <Image x:Name="addCity1_icon" HorizontalAlignment="Left" Height="20" Margin="192,379,0,0" VerticalAlignment="Top" Width="20" Source="/Resources/AddCity.png" MouseLeftButtonDown="imgLocation1Change_Click" ToolTip="Add city"/>
+        <Image x:Name="addCity2_icon" HorizontalAlignment="Left" Height="20" Margin="396,379,0,0" VerticalAlignment="Top" Width="20" Source="/Resources/AddCity.png" MouseLeftButtonDown="imgLocation2Change_Click" ToolTip="Add city"/>
+        <Image x:Name="addCity3_icon" HorizontalAlignment="Left" Height="20" Margin="600,379,0,0" VerticalAlignment="Top" Width="20" Source="/Resources/AddCity.png" MouseLeftButtonDown="imgLocation3Change_Click" ToolTip="Add city"/>
+        <Label x:Name="lblWind" Content="Wind" HorizontalAlignment="Left" Height="29" Margin="312,135,0,0" VerticalAlignment="Top" Width="82" Foreground="White"/>
+        <Label x:Name="lblPressure" Content="Pressure" HorizontalAlignment="Left" Height="28" Margin="309,179,0,0" VerticalAlignment="Top" Width="83" Foreground="White"/>
+        <Label x:Name="lblHumidity" Content="Humidity" HorizontalAlignment="Left" Height="29" Margin="310,220,0,0" VerticalAlignment="Top" Width="83" Foreground="White"/>
+        <Label x:Name="lblLastUpdated" Content="Label" HorizontalAlignment="Left" Margin="23,407,0,25" Width="182" FontSize="8" Foreground="White"/>
 
     </Grid>
 </Window>

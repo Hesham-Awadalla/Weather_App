@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Controls.Primitives;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 
@@ -27,6 +26,11 @@ namespace Weather_App
         Location locationDefault2 = new Location();
         Location locationDefault3 = new Location();
 
+        public static int stdMainLocalTime;
+        public static int stdLocation1LocalTime;
+        public static int stdLocation2LocalTime;
+        public static int stdLocation3LocalTime;
+
         System.Windows.Input.MouseButtonEventArgs e;
 
         public MainWindow()
@@ -38,13 +42,19 @@ namespace Weather_App
             GetWeatherData(null, new EventArgs());
 
             InitializeRefreshWeatherTimer();
+
+            Clock mainLocationClock = new Clock(30, "canvasMainClock");
+            Clock location1Clock = new Clock(15, "canvasClock1");
+            Clock location2Clock = new Clock(15, "canvasClock2");
+            Clock location3Clock = new Clock(15, "canvasClock3");
+
         }
 
         public void InitializeRefreshWeatherTimer()
         {
             DispatcherTimer timer = new DispatcherTimer();
             timer.Tick += new EventHandler(GetWeatherData);
-            timer.Interval = new TimeSpan(0, 3, 0);
+            timer.Interval = new TimeSpan(0, 1, 0);
             timer.Start();
         }
 
@@ -57,6 +67,9 @@ namespace Weather_App
             lblMainCity.Content = weatherDataMain["location"]["name"];
             lblMainCountry.Content = weatherDataMain["location"]["country"];
             imgMain.Source = new BitmapImage(new Uri("https:" + weatherDataMain["current"]["condition"]["icon"].ToString()));
+            //StundenZeiger der analogen Uhr
+            stdMainLocalTime = Convert.ToInt32(weatherDataMain["location"]["localtime"].ToString().Split(" ")[1].Split(':')[0]);
+
         }
 
         public void GetDefaultLocation()
@@ -85,29 +98,38 @@ namespace Weather_App
             lblMainCountry.Content = weatherDataMain["location"]["country"];
             imgMain.Source = new BitmapImage(new Uri("https:" + weatherDataMain["current"]["condition"]["icon"].ToString()));
 
-            string additionalWeatherData = weatherDataMain["current"]["wind_kph"] + " km/h"
-            + "\n\n" + weatherDataMain["current"]["pressure_mb"] + " mb"
-            + "\n\n" + weatherDataMain["current"]["humidity"] + "%"
-            + "\n\n" + weatherDataMain["location"]["localtime"];
-
-            lblAdditionalWeatherData.Content = additionalWeatherData;
+            //Additional weather data
+            lblWind.Content = weatherDataMain["current"]["wind_kph"] + " km/h";
+            lblPressure.Content = weatherDataMain["current"]["pressure_mb"] + " mb";
+            lblHumidity.Content = weatherDataMain["current"]["humidity"] + "%";
+            //StundenZeiger der analogen Uhr
+            stdMainLocalTime = Convert.ToInt32(weatherDataMain["location"]["localtime"].ToString().Split(" ")[1].Split(':')[0]);
 
             lblLocation1Temp.Content = weatherDataLocation1["current"]["temp_c"] + "°C";
             lblLocation1City.Content = weatherDataLocation1["location"]["name"];
             lblLocation1Country.Content = weatherDataLocation1["location"]["country"];
             imgLocation1.Source = new BitmapImage(new Uri("https:" + weatherDataLocation1["current"]["condition"]["icon"].ToString()));
+            //StundenZeiger der analogen Uhr
+            stdLocation1LocalTime = Convert.ToInt32(weatherDataLocation1["location"]["localtime"].ToString().Split(" ")[1].Split(':')[0]);
 
             lblLocation2Temp.Content = weatherDataLocation2["current"]["temp_c"] + "°C";
             lblLocation2City.Content = weatherDataLocation2["location"]["name"];
             lblLocation2Country.Content = weatherDataLocation2["location"]["country"];
             imgLocation2.Source = new BitmapImage(new Uri("https:" + weatherDataLocation2["current"]["condition"]["icon"].ToString()));
+            //StundenZeiger der analogen Uhr
+            stdLocation2LocalTime = Convert.ToInt32(weatherDataLocation2["location"]["localtime"].ToString().Split(" ")[1].Split(':')[0]);
 
             lblLocation3Temp.Content = weatherDataLocation3["current"]["temp_c"] + "°C";
             lblLocation3City.Content = weatherDataLocation3["location"]["name"];
             lblLocation3Country.Content = weatherDataLocation3["location"]["country"];
             imgLocation3.Source = new BitmapImage(new Uri("https:" + weatherDataLocation3["current"]["condition"]["icon"].ToString()));
+            //StundenZeiger der analogen Uhr
+            stdLocation3LocalTime = Convert.ToInt32(weatherDataLocation3["location"]["localtime"].ToString().Split(" ")[1].Split(':')[0]);
 
             lblLastUpdated.Content = "Last updated: " + weatherDataMain["current"]["last_updated"];
+
+            //ToDo:
+            this.UpdateLayout();
         }
 
         private void txtSearchCity_TextChanged(object sender, TextChangedEventArgs e)
@@ -143,12 +165,13 @@ namespace Weather_App
                 lblMainCountry.Content = weatherDataMain["location"]["country"];
                 imgMain.Source = new BitmapImage(new Uri("https:" + weatherDataMain["current"]["condition"]["icon"].ToString()));
 
-                string additionalWeatherData = weatherDataMain["current"]["wind_kph"] + " km/h"
-                + "\n\n" + weatherDataMain["current"]["pressure_mb"] + " mb"
-                + "\n\n" + weatherDataMain["current"]["humidity"] + "%"
-                + "\n\n" + weatherDataMain["location"]["localtime"];
+                //Additional weather data
+                lblWind.Content = weatherDataMain["current"]["wind_kph"] + " km/h";
+                lblPressure.Content = weatherDataMain["current"]["pressure_mb"] + " mb";
+                lblHumidity.Content = weatherDataMain["current"]["humidity"] + "%";
 
-                lblAdditionalWeatherData.Content = additionalWeatherData;
+                //StundenZeiger der analogen Uhr
+                stdMainLocalTime = Convert.ToInt32(weatherDataMain["location"]["localtime"].ToString().Split(" ")[1].Split(':')[0]);
             }
 
             txtSearchCity.Text = "";
@@ -171,7 +194,11 @@ namespace Weather_App
 
             lblLocation1Temp.Content = weatherDataLocation1["current"]["temp_c"] + "°C";
             lblLocation1City.Content = weatherDataLocation1["location"]["name"];
+            lblLocation1Country.Content = weatherDataLocation1["location"]["country"];
             imgLocation1.Source = new BitmapImage(new Uri("https:" + weatherDataLocation1["current"]["condition"]["icon"].ToString()));
+
+            //StundenZeiger der analogen Uhr
+            stdLocation1LocalTime = Convert.ToInt32(weatherDataLocation1["location"]["localtime"].ToString().Split(" ")[1].Split(':')[0]);
         }
 
         private void imgLocation2Change_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
@@ -190,7 +217,11 @@ namespace Weather_App
 
             lblLocation2Temp.Content = weatherDataLocation2["current"]["temp_c"] + "°C";
             lblLocation2City.Content = weatherDataLocation2["location"]["name"];
+            lblLocation2Country.Content = weatherDataLocation2["location"]["country"];
             imgLocation2.Source = new BitmapImage(new Uri("https:" + weatherDataLocation2["current"]["condition"]["icon"].ToString()));
+
+            //StundenZeiger der analogen Uhr
+            stdLocation2LocalTime = Convert.ToInt32(weatherDataLocation2["location"]["localtime"].ToString().Split(" ")[1].Split(':')[0]);
         }
 
         private void imgLocation3Change_Click(object sender, System.Windows.Input.MouseButtonEventArgs e)
@@ -209,8 +240,11 @@ namespace Weather_App
 
             lblLocation3Temp.Content = weatherDataLocation3["current"]["temp_c"] + "°C";
             lblLocation3City.Content = weatherDataLocation3["location"]["name"];
+            lblLocation3Country.Content = weatherDataLocation3["location"]["country"];
             imgLocation3.Source = new BitmapImage(new Uri("https:" + weatherDataLocation3["current"]["condition"]["icon"].ToString()));
-        }
 
+            //StundenZeiger der analogen Uhr
+            stdLocation3LocalTime = Convert.ToInt32(weatherDataLocation3["location"]["localtime"].ToString().Split(" ")[1].Split(':')[0]);
+        }
     }
 }

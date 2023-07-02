@@ -1,17 +1,12 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace Weather_App
 {
     class Weather
-    { 
+    {
         private const string key = "585268ff92324b56990155655230605";
 
         public static JObject GetWeatherInformation(string latitude, string longitude)

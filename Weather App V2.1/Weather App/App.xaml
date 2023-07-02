@@ -4,6 +4,9 @@
              xmlns:local="clr-namespace:Weather_App"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Canvas x:Key="canvasMainClock" Margin="565,20,27,373" Width="60" Height="60"/>
+        <Canvas x:Key="canvasClock1"  Margin="179,295,443,128" Width="30" Height="30"/>
+        <Canvas x:Key="canvasClock2" Margin="383,295,239,128" Width="30" Height="30"/>
+        <Canvas x:Key="canvasClock3" Margin="587,295,35,128" Width="30" Height="30"/>
     </Application.Resources>
 </Application>

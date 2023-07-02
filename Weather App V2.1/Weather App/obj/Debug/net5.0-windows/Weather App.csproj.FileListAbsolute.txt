@@ -116,3 +116,4 @@ C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App V2.1\Weat
 C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App V2.1\Weather App\obj\Debug\net5.0-windows\Weather App.pdb
 C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App V2.1\Weather App\obj\Debug\net5.0-windows\Weather App.genruntimeconfig.cache
 C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App V2.1\Weather App\obj\Debug\net5.0-windows\ref\Weather App.dll
+C:\Users\HEOSMAN\Documents\#Mein Cloud\4. Git\#Weather_App\Weather App V2.1\Weather App\obj\Debug\net5.0-windows\App.baml
