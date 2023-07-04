@@ -8,6 +8,7 @@ using System.Data.SQLite;
 using System.Windows.Markup;
 using System.IO;
 using System.Globalization;
+using System.Windows;
 
 namespace Weather_App
 {
@@ -22,29 +23,36 @@ namespace Weather_App
         {
             List<string> foundCities = new List<string>();
 
-            connection.Open();
-
-            SQLiteDataReader reader;
-            SQLiteCommand command;
-
-            string statement = $"SELECT city, country FROM cities WHERE city Like '{search}%'";
-
-            command = connection.CreateCommand();
-            command.CommandText = statement;
-
-            reader = command.ExecuteReader();
-
-            while (reader.Read())
+            try
             {
-                string city = reader.GetString(0);
-                string country = reader.GetString(1);
-                string cityAndCountry = city + ", " + country;
+                connection.Open();
 
-                foundCities.Add(cityAndCountry);
+                SQLiteDataReader reader;
+                SQLiteCommand command;
+
+                string statement = $"SELECT city, country FROM cities WHERE city Like '{search}%'";
+
+                command = connection.CreateCommand();
+                command.CommandText = statement;
+
+                reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string city = reader.GetString(0);
+                    string country = reader.GetString(1);
+                    string cityAndCountry = city + ", " + country;
+
+                    foundCities.Add(cityAndCountry);
+                }
+
+                reader.Close();
+                connection.Close();
             }
-
-            reader.Close();
-            connection.Close();
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error beim Lesen von der Datenbank", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
             return foundCities;
         }
@@ -55,26 +63,33 @@ namespace Weather_App
         {
             MainWindow.Location location = new MainWindow.Location();
 
-            connection.Open();
-
-            SQLiteDataReader reader;
-            SQLiteCommand command;
-
-            string statement = $"SELECT lat, lng FROM cities WHERE city = '{city}' AND country = '{country}'";
-
-            command = connection.CreateCommand();
-            command.CommandText = statement;
-
-            reader = command.ExecuteReader();
-
-            while (reader.Read())
+            try
             {
-                location.Latitude = reader.GetString(0);
-                location.Longitude = reader.GetString(1);
-            }
+                connection.Open();
 
-            reader.Close();
-            connection.Close();
+                SQLiteDataReader reader;
+                SQLiteCommand command;
+
+                string statement = $"SELECT lat, lng FROM cities WHERE city = '{city}' AND country = '{country}'";
+
+                command = connection.CreateCommand();
+                command.CommandText = statement;
+
+                reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    location.Latitude = reader.GetString(0);
+                    location.Longitude = reader.GetString(1);
+                }
+
+                reader.Close();
+                connection.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error beim Lesen von der Datenbank", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
 
             return location;    
         }
