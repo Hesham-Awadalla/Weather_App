@@ -16,6 +16,8 @@ namespace Weather_App
         private static readonly string database = $"Data Source = {Directory.GetCurrentDirectory()}\\cities.db";
         private static SQLiteConnection connection = new SQLiteConnection(database);
 
+
+        //Select cities from database where city name is like user entry
         public static List<string> SearchCity(string search)
         {
             List<string> foundCities = new List<string>();
@@ -46,7 +48,9 @@ namespace Weather_App
 
             return foundCities;
         }
+        
 
+        //Get latitude and longitude of the selected city from the database
         public static MainWindow.Location LocateCity(string city, string country)
         {
             MainWindow.Location location = new MainWindow.Location();

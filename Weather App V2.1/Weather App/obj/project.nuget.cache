@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "phmCpNC9XqXkn7LzsAFp1iKnM16GaY324P33rg0JON9FAMhh1b9OxwrRwNjntpiztduhL2CNeW3oL7VMU6+5tg==",
+  "dgSpecHash": "I7Cd6r3YHij7i9G64OwQEyEMW3H6+0Ji2kp34AQMaX6ij6rHfDlOplRe+gm2kjOukUf2yT0MZT7EJrwwTRc8Pg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HEOSMAN\\Documents\\#Mein Cloud\\4. Git\\#Weather_App\\Weather App V2.1\\Weather App\\Weather App.csproj",
+  "projectFilePath": "C:\\Users\\MAUHOFM\\Desktop\\Weather_App\\Weather App V2.1\\Weather App\\Weather App.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\HEOSMAN\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
-    "C:\\Users\\HEOSMAN\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.117\\stub.system.data.sqlite.core.netstandard.1.0.117.nupkg.sha512",
-    "C:\\Users\\HEOSMAN\\.nuget\\packages\\system.data.sqlite.core\\1.0.117\\system.data.sqlite.core.1.0.117.nupkg.sha512"
+    "C:\\Users\\MAUHOFM\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\MAUHOFM\\.nuget\\packages\\stub.system.data.sqlite.core.netstandard\\1.0.117\\stub.system.data.sqlite.core.netstandard.1.0.117.nupkg.sha512",
+    "C:\\Users\\MAUHOFM\\.nuget\\packages\\system.data.sqlite.core\\1.0.117\\system.data.sqlite.core.1.0.117.nupkg.sha512"
   ],
   "logs": []
 }
