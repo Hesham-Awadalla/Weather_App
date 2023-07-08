@@ -40,7 +40,6 @@ namespace Weather_App
             imgLocateMe_Click(null, e);
             GetDefaultLocation();
             GetWeatherData(null, new EventArgs());
-
             InitializeRefreshWeatherTimer();
 
             Clock mainLocationClock = new Clock(30, "canvasMainClock");
@@ -103,7 +102,7 @@ namespace Weather_App
             lblWind.Content = weatherDataMain["current"]["wind_kph"] + " km/h";
             lblPressure.Content = weatherDataMain["current"]["pressure_mb"] + " mb";
             lblHumidity.Content = weatherDataMain["current"]["humidity"] + "%";
-            stdMainLocalTime = Convert.ToInt32(weatherDataMain["location"]["localtime"].ToString().Split(" ")[1].Split(':')[0]);  //StundenZeiger
+            stdMainLocalTime = Convert.ToInt32(weatherDataMain["location"]["localtime"].ToString().Split(" ")[1].Split(':')[0]);
 
 
             //Set Location 1 values
@@ -111,7 +110,7 @@ namespace Weather_App
             lblLocation1City.Content = weatherDataLocation1["location"]["name"];
             lblLocation1Country.Content = weatherDataLocation1["location"]["country"];
             imgLocation1.Source = new BitmapImage(new Uri("https:" + weatherDataLocation1["current"]["condition"]["icon"].ToString()));
-            stdLocation1LocalTime = Convert.ToInt32(weatherDataLocation1["location"]["localtime"].ToString().Split(" ")[1].Split(':')[0]);  //StundenZeiger
+            stdLocation1LocalTime = Convert.ToInt32(weatherDataLocation1["location"]["localtime"].ToString().Split(" ")[1].Split(':')[0]);
 
 
             //Set Location 2 values
@@ -119,7 +118,7 @@ namespace Weather_App
             lblLocation2City.Content = weatherDataLocation2["location"]["name"];
             lblLocation2Country.Content = weatherDataLocation2["location"]["country"];
             imgLocation2.Source = new BitmapImage(new Uri("https:" + weatherDataLocation2["current"]["condition"]["icon"].ToString()));
-            stdLocation2LocalTime = Convert.ToInt32(weatherDataLocation2["location"]["localtime"].ToString().Split(" ")[1].Split(':')[0]);  //StundenZeiger
+            stdLocation2LocalTime = Convert.ToInt32(weatherDataLocation2["location"]["localtime"].ToString().Split(" ")[1].Split(':')[0]);
 
 
             //Set Location 3 values
@@ -127,7 +126,7 @@ namespace Weather_App
             lblLocation3City.Content = weatherDataLocation3["location"]["name"];
             lblLocation3Country.Content = weatherDataLocation3["location"]["country"];
             imgLocation3.Source = new BitmapImage(new Uri("https:" + weatherDataLocation3["current"]["condition"]["icon"].ToString()));
-            stdLocation3LocalTime = Convert.ToInt32(weatherDataLocation3["location"]["localtime"].ToString().Split(" ")[1].Split(':')[0]);  //StundenZeiger
+            stdLocation3LocalTime = Convert.ToInt32(weatherDataLocation3["location"]["localtime"].ToString().Split(" ")[1].Split(':')[0]);
 
             //Update
             lblLastUpdated.Content = "Last updated: " + weatherDataMain["current"]["last_updated"];
@@ -167,7 +166,6 @@ namespace Weather_App
                 lblMainCountry.Content = weatherDataMain["location"]["country"];
                 imgMain.Source = new BitmapImage(new Uri("https:" + weatherDataMain["current"]["condition"]["icon"].ToString()));
 
-                //Additional weather data
                 lblWind.Content = weatherDataMain["current"]["wind_kph"] + " km/h";
                 lblPressure.Content = weatherDataMain["current"]["pressure_mb"] + " mb";
                 lblHumidity.Content = weatherDataMain["current"]["humidity"] + "%";

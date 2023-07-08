@@ -12,7 +12,6 @@ namespace Weather_App
         public static JObject GetWeatherInformation(string latitude, string longitude)
         {
             JObject json = new JObject();
-
             string endpoint = $"http://api.weatherapi.com/v1/current.json?Key={key}&q={latitude},{longitude}";
 
             HttpClient client = new HttpClient();
